@@ -4,9 +4,10 @@ import { Component, OnInit } from '@angular/core';
 import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-performance',
-  templateUrl: './performance.component.html',
-  styleUrls: ['./performance.component.css']
+    selector: 'app-performance',
+    templateUrl: './performance.component.html',
+    styleUrls: ['./performance.component.css'],
+    standalone: false
 })
 export class PerformanceComponent implements OnInit {
   performanceIcon=faChartLine

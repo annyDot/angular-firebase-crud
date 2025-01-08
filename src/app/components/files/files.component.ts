@@ -7,9 +7,10 @@ import { FileService } from 'src/app/shared/services/file.service';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-files',
-  templateUrl: './files.component.html',
-  styleUrls: ['./files.component.css'],
+    selector: 'app-files',
+    templateUrl: './files.component.html',
+    styleUrls: ['./files.component.css'],
+    standalone: false
 })
 export class FilesComponent implements OnInit {
   filesIcon = faFile;

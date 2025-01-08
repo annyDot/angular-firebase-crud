@@ -9,9 +9,10 @@ import { formStatus, formMessage } from 'src/app/shared/models/FormStatusMsg';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-update-user',
-  templateUrl: './update-user.component.html',
-  styleUrls: ['./update-user.component.css'],
+    selector: 'app-update-user',
+    templateUrl: './update-user.component.html',
+    styleUrls: ['./update-user.component.css'],
+    standalone: false
 })
 export class UpdateUserComponent implements OnInit {
   faUserEdit = faUserEdit;
