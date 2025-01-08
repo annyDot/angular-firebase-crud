@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navigation/navbar/navbar.component';
@@ -19,31 +19,24 @@ import { ChartsModule } from 'ng2-charts';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    SidebarComponent,
-    AddUserComponent,
-    UpdateUserComponent,
-    TasksComponent,
-    LoadingSpinnerComponent,
-    UserProfileComponent,
-    PerformanceComponent,
-    FilesComponent,
-    CustomDatePipe,
-    BarChartComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    FormsModule,
-    HttpClientModule,
-    ChartsModule,
-    NgbModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        NavbarComponent,
+        SidebarComponent,
+        AddUserComponent,
+        UpdateUserComponent,
+        TasksComponent,
+        LoadingSpinnerComponent,
+        UserProfileComponent,
+        PerformanceComponent,
+        FilesComponent,
+        CustomDatePipe,
+        BarChartComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        FormsModule,
+        ChartsModule,
+        NgbModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
